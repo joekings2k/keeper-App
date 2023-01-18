@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(232, 232, 232);
+}
+.headertxt{
+    font-family:'Indie Flower', cursive;
+    font-size: 35px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}

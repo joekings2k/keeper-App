@@ -1,0 +1,16 @@
+.card{
+    border-radius: 5px;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 1px 1px rgb(160, 160, 160);
+    margin-bottom: 10px;
+}
+.innerc{
+    padding: 17px;
+}
+.text{
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+}
