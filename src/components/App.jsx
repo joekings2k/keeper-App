@@ -1,8 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./note";
-import notes from "../notes";
+import CreateArea from "./createArea";
 
 
 const noteStyle ={
@@ -14,13 +14,18 @@ const noteStyle ={
 
 
 function App() {
+
+  const [storedKeeperNotes,showKeeperNotes ]=useState([])
+
   return (
     <div>
       <Header />
+      <CreateArea />
       <div style={noteStyle}>
-        {notes.map((note, i) => {
-          return <Note key={i} title={note.title} content={note.content} />;
-        })}
+        <Note 
+          title = "Note Title"
+          content= "Note Content"
+        />
       </div>
 
       <Footer />
