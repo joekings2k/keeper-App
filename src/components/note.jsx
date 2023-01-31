@@ -7,8 +7,10 @@ function Note(props) {
       <div className="innerc">
         <h1 className="text">{props.title}</h1>
         <hr/>
-        <p className="text">{props.content} </p>
-        <button>Delete</button>
+        <p  className="text">{props.content} </p>
+        <button onClick={()=>{
+          props.onDelete(props.id)
+        }}>Delete</button>
       </div>
     </div>
   );
