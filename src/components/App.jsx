@@ -5,28 +5,31 @@ import Note from "./note";
 import CreateArea from "./createArea";
 
 
-const noteStyle ={
-  display:"flex",
-  justifyContent:"space-evenly",
-  margin:"10px",
-  flexWrap: "wrap",
-}
-
-
 function App() {
 
   const [storedKeeperNotes,showKeeperNotes ]=useState([])
+  
+  const handleClick = (keeperNotes) => {
+    showKeeperNotes((previousItems) => {
+      return [...previousItems, keeperNotes];
+    });
+  };
 
   return (
     <div>
       <Header />
-      <CreateArea />
-      <div style={noteStyle}>
-        <Note 
-          title = "Note Title"
-          content= "Note Content"
-        />
-      </div>
+      <CreateArea 
+        handleClick={handleClick}
+      />
+      {storedKeeperNotes.map((note,i)=>{
+        return(
+          <div>
+            <Note key ={i} title={note.title} content={note.content} />
+          </div>
+        )
+        
+      })}
+      
 
       <Footer />
     </div>

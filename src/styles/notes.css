@@ -1,17 +1,33 @@
-.card{
-    border-radius: 5px;
-    width: 250px;
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: white;
-    box-shadow: 1px 1px #a0a0a0;
-    margin-bottom: 10px;
-    
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
 }
-.innerc{
-    padding: 17px;
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
-.text{
-    font-family: 'Lexend', sans-serif;
-    font-size: 20px;
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
 }

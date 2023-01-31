@@ -1,6 +1,7 @@
 import React ,{useState} from "react";
+import "../styles/createArea.css"
 
-function CreateArea() {
+function CreateArea(props) {
   const [keeperNotes,SetKeeperNotes] =useState({
     title:"",
     content:""
@@ -10,8 +11,7 @@ function CreateArea() {
     const {name, value}= event.target
     SetKeeperNotes((previousVals)=>{
       return{
-        ...previousVals,
-        [name]:value
+        ...previousVals,[name]:value
       }
     })
     
@@ -20,10 +20,29 @@ function CreateArea() {
   return (
     <div>
       <form>
-        <input name="title" placeholder="Title" value={keeperNotes.title} onChange ={HandleOnchange}/>
-        <hr/>
-        <textarea name="content" placeholder="Take a note..." rows="3" value={keeperNotes.content} onChange ={HandleOnchange}/>
-        <button>Add</button>
+        <input
+          name="title"
+          placeholder="Title"
+          value={keeperNotes.title}
+          onChange={HandleOnchange}
+        />
+        <hr />
+        <textarea
+          name="content"
+          placeholder="Take a note..."
+          rows="3"
+          value={keeperNotes.content}
+          onChange={HandleOnchange}
+        />
+        <button
+          onClick={(event) => {
+            props.handleClick(keeperNotes);
+            SetKeeperNotes({title:"",content:""});
+            event.preventDefault();
+          }}
+        >
+          Add
+        </button>
       </form>
     </div>
   );
